@@ -38,13 +38,6 @@
     }
 }
 
-@media only screen and (min-width:200px) and (max-width:1200px) {
-    .container {
-        width: calc(100vw - 50px) !important;
-        margin: auto !important;
-    }
-}
-
 @media only screen and (min-width:200px) and (max-width:1000px) {
     .porduct-conatiner {
         grid-gap: 20px;
@@ -68,6 +61,9 @@
 @media only screen and (min-width:200px) and (max-width:750px) {
     .porduct-conatiner {
         grid-template-columns: repeat(2, 1fr);
+    }
+    .porduct-conatiner {
+        grid-gap: 20px;
     }
 }
 
