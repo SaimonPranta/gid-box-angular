@@ -1,0 +1,111 @@
+header {
+    background-color: #121133;
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    flex-basis: 1fr 1fr;
+    align-items: center;
+    padding: 20px 0;
+    margin: 0;
+
+    h2 {
+        width: 300px;
+        color: #fff;
+        font-size: 2rem;
+        text-transform: uppercase;
+    }
+
+    .fa-bars {
+        display: none;
+    }
+}
+
+
+header ul {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+
+    li {
+        list-style: none;
+        position: relative;
+
+        a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #fff;
+            padding: 8px 15px;
+            font-size: 1.2rem;
+            transition: .7s;
+        }
+    }
+
+    li:hover .sub-menu {
+        position: absolute;
+        left: 0px;
+    }
+
+    li a:hover {
+        padding: 8px 15px;
+        background-color: rgb(123, 107, 107);
+    }
+}
+
+header .sub-menu {
+    position: absolute;
+    left: 10000px;
+    display: flex;
+    flex-direction: column;
+    background-color: #302f50;
+    z-index: 9;
+}
+@media only screen and (min-width:200px) and (max-width:1000px) {
+    header h2{
+        width: 200px;
+        font-size: 1.5rem;
+    }
+    header ul li a{
+        font-size: 1rem;
+    }
+}
+@media only screen and (min-width:200px) and (max-width:750px) {
+    nav{
+        position: relative;
+    }
+    header h2{
+        width: 180px;
+        font-size: 1.3rem;
+    }
+    header nav .fa-bars{
+        display: block;
+        color: #fff !important;
+        width: 30px;
+        margin-left: auto;
+    }
+    header .main-menu{
+        background-color: #121133;
+        position: absolute;
+        top: -20px;
+        transform: translateY(62px);
+        scale: 1 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        transition: .5s;
+    }
+    .menu-controler{
+        top: 0px !important;
+        scale: 1 1 !important;
+    }
+    header ul li a{
+        font-size: .9rem;
+    }
+    header ul li:hover .sub-menu{
+        position: absolute;
+        left: 100px;
+        width: 50%;
+    }
+}
